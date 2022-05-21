@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <meta name="description" content="Js chat app">
+    <meta name="keywords" content="HTML, CSS, JavaScript, chat app, nodejs">
+    <meta name="author" content="Enes Ago">
+    <script src="https://cdn.socket.io/4.1.2/socket.io.min.js" integrity="sha384-toS6mmwu70G0fw54EGlWWeA4z3dyJ+dlXBtSURSKN4vyRFOcxd3Bzjj/AoOwY+Rg" crossorigin="anonymous"></script>
+    <script defer src="script.js" type="module"></script>
+</head>
+<body>  
+        <form id="form1">
+            <div class="container1">
+            <input type="text" placeholder="your name" required value="" id="name">
+            <button type="submit">Start Messaging</button>
+            </div>
+        </form>
+        <form id="form2">
+            <div class="container2">
+                <ul id="messageContainer">
+                </ul>
+            </div>
+            <div class="messages">
+                <input type="text" id="message" placeholder="send message">
+                <button type="submit" id="sendMessage">Send</button> <br> <br>
+                <input type="text" placeholder="join room" value="" id="room">
+                <button type="submit" id="joinRoom">Join</button>
+            </div>
+            
+        </form>
+</body>
+</html>
