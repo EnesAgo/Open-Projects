@@ -1,0 +1,76 @@
+.weatherapp{
+    grid-area: mid;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: rgb(188,238,255);
+    background: linear-gradient(180deg, rgba(188,238,255,1) 2%, rgba(96,244,249,1) 100%);
+  }
+.weatherApp-box {
+    height: 500px;
+    width: 300px;
+    border-bottom: 1px solid rgb(252, 252, 252);
+    border-right: 1px solid rgb(252, 252, 252);
+    background: rgb(150,228,255);
+    background: linear-gradient(180deg, rgba(150,228,255,1) 2%, rgba(0,190,255,1) 100%);
+    box-shadow: 5px 5px 5px 1px #ffffff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.weatherApp-box *{
+  margin: 5px;
+}
+.weatherApp-box input{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #808080;
+  border-radius: 5px;
+  height: 25px;
+  width: 200px;
+  line-height: 15px;
+  font-size: 13px;
+  transition: 350ms;
+  padding-left: 5px;
+}
+.weatherApp-box input::placeholder{
+  line-height: 15px;
+  font-size: 15px;
+}
+.weatherApp-box input:hover{
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 0px 1px black inset;
+}
+.weatherApp-box button{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 30px;
+  width: 60px;
+  line-height: 25px;
+  font-size: 15px;
+  background-color: #eeeeee;
+  border: 1px solid #8f8f8f;
+  border-radius: 7.5px;
+  cursor: pointer;
+  transition: 100ms;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding:0;
+}
+.weatherApp-box button:hover{
+  background-color: #e7e7e7;
+  border: 2px solid #6d6d6d;
+}
+.weatherApp-box h1{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.weatherApp-box h2, .weatherApp-box h3{
+  font-size: 25px;
+  margin: 10px;
+}
