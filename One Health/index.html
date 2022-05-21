@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Health</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="top">
+
+            <ul>
+                <li>
+                    <div>
+                        <i class="fas fa-phone fa-rotate-90 headerLeftIcon"></i>
+                        <a href="tel:+0012344556666">+00 123 4455 6666</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope headerLeftIcon"></i>
+                        <a href="mailto:email@domain.com">email@domain.com</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f headerRightIcon"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter headerRightIcon"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok headerRightIcon"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram headerRightIcon"></i></a>
+                    
+
+                </li>
+            </ul>
+
+        </div>
+        <div class="bot">
+            
+            <ul>
+                <li class="firstLi">
+                    <h3><span class="green">One</span>-Health</h3>
+                    <div>
+                            <button id="searchSumbmit">
+                                <i class="fas fa-search green"></i>
+                            </button>
+                            <input type="text" id="searchInput" placeholder="Enter Keyword...">
+                    </div>
+                    <span id="openNav" class="menubut">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </li>
+                <li class="secLi">
+                    <ul class="navbar">
+                        <li>
+                            <a onclick="changeColor(this)" href="#container1">Home</a>
+                        </li>
+                        <li>
+                            <a onclick="changeColor(this)" href="#container2">About Us</a>
+                        </li>
+                        <li>
+                            <a onclick="changeColor(this)" href="#container3">Doctors</a>
+                        </li>
+                        <li>
+                            <a onclick="changeColor(this)" href="#container4">News</a>
+                        </li>
+                        <li>
+                            <a onclick="changeColor(this)" href="#container5">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="login">
+                                    <h4>Login/Register</h4>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container container1" id="container1">
+            <h4>LET'S MAKE YOUR LIFE HAPPIER</h4>
+            <h2>HEALTHY LEAVING</h2>
+
+            <div class="consultBut">
+                <p>let's consult</p>
+            </div>
+
+        </div>
+
+        <div class="container container2" id="container2">
+            <div class="threeBoxes">
+                <div class="box">
+                    <img src="https://ykcstruga9aclasses.000webhostapp.com/user.PNG" alt="circle">
+                    <h3>Chat with a <br> doctor</h3>
+                </div>
+                <div class="box">
+                    <img src="https://ykcstruga9aclasses.000webhostapp.com/user.PNG" alt="circle">
+                    <h3>One-Health <br> Protection</h3>
+                </div>
+                <div class="box">
+                    <img src="https://ykcstruga9aclasses.000webhostapp.com/user.PNG" alt="circle">
+                    <h3>One-Health <br> Pharmacy</h3>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <h1>Welcome to Your health Center</h1>
+                    <p class="lorem"> 
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Et enim minima, doloremque, quod cum libero quasi debitis
+                        quo necessitatibus tempora, distinctio facilis possimus dolores 
+                        sapiente non totam corporis illo nostrum?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Quod, odio animi? At assumenda est natus amet impedit aliquam
+                        beatae accusantium ipsam repellat laboriosam. Blanditiis, 
+                        fugiat eum? Sint consequatur temporibus repudiandae?
+                    </p>
+                    <div class="mediumGreenButton">
+                        <p>let's consult</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="photos/doctor.png" alt="doctor">
+                </li>
+            </ul>
+        </div>
+
+        <div class="container container3" id="container3">
+        
+            <h1>Our Doctors</h1>
+        
+            <ul id="doctors">
+                <li>
+                    <img src="photos/doctor1.PNG" alt="doctor" id="imageOne">
+                    <div>
+                        <h3>name</h3>
+                        <p>category</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="photos/doctor2.PNG" alt="doctor" id="imageTwo">
+                    <div>
+                        <h3>name</h3>
+                        <p>category</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="photos/doctor3.PNG" alt="doctor" id="imageThree">
+                    <div>
+                        <h3>name</h3>
+                        <p>category</p>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="buttons">
+                <button id="imgLeft">
+                    <i class="fas fa-arrow-right fa-rotate-180"></i>
+                </button>
+                <button id="imgRight">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        
+        </div>
+
+        <div class="container container4" id="container4">
+
+            <h1>Latest News</h1>
+            
+            <ul id="news">
+                <li>
+                    <img src="photos/news1.PNG" alt="news" id="imageOne">
+                    <div>
+                        <h3>List of Countries without <br> Coronavirus case</h3>
+                        <p><span>from uknown</span> <span>1 week ago</span></p>
+                    </div>
+                </li>
+                <li>
+                    <img src="photos/news1.PNG" alt="doctor" id="imageTwo">
+                    <div>
+                        <h3>List of Countries without <br> Coronavirus case</h3>
+                        <p><span>from uknown</span> <span>1 week ago</span></p>
+                    </div>
+                </li>
+                <li>
+                    <img src="photos/news1.PNG" alt="doctor" id="imageThree">
+                    <div>
+                        <h3>List of Countries without <br> Coronavirus case</h3>
+                        <p><span>from uknown</span> <span>1 week ago</span></p>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="mediumGreenButton readMore">Read More</button>
+
+        </div>
+
+    </div>
+
+        <img src="photos/ourApp.PNG" alt="our app" class="photo">
+
+    <div class="footer">
+            <ul class="nav">
+                <li class="pt1">
+                    <h3>Company</h3>
+
+                    <a href="#">About Us</a> <br>
+                    <a href="#">Career</a> <br>
+                    <a href="#">Editorial Team</a> <br>
+                    <a href="#">Protection</a>
+                </li>
+                <li class="pt1">
+                    <h3>More</h3>
+
+                    <a href="#">Terms & Condition</a> <br>
+                    <a href="#">Privacy</a> <br>
+                    <a href="#">Advertise</a> <br>
+                    <a href="#">Join as Doctors</a>
+                </li>
+                <li class="pt1">
+                    <h3>Our partner</h3>
+
+                    <a href="#">One-Fitness</a> <br>
+                    <a href="#">One-Drugs</a> <br>
+                    <a href="#">One-Live</a>
+                </li>
+                <li class="pt1">
+                    <h3>Contact</h3>
+
+                    <a href="#">351 street Franklin, MA 02038</a> <br>
+                    <a href="tel:701-573-7582">701-573-7582 email@domain.com</a> <br> <br>
+
+                    <h3>Social Media</h3>
+
+                    <div>
+                        <a href="https://facebook.com" target="_blank" class="footerIcons"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="footerIcons"><i class="fab fa-twitter"></i></a>
+                        <a href="https://google.com" target="_blank" class="footerIcons"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="footerIcons"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="footerIcons"><i class="fab fa-linkedin"></i></a>
+                    </div>
+
+                </li>
+            </ul>
+    </div>
+</body>
+</html>
